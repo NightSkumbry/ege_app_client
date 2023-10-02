@@ -12,20 +12,25 @@ def auth_login():
     try:
         response = requests.get(
             f'{server_address}/api/auth',
-            json={'auth': [ui_auth.Last_name_text.text(), ui_auth.Password_text.text()]}
+            json={'auth': [ui_auth.Login_text.text(), ui_auth.Password_text.text()]}
         )
     except requests.exceptions.ConnectionError:
         ui_auth.Status_label.setText('Нет соединения')
     else:
         if response.ok:
             cookies = response.cookies
-            global_stages[0] = 'main'
+            if response.text:
+                ...
+            if response.text == 'not changed':
+                global_stages[0] = 'configure'
+            else:
+                global_stages[0] = 'main'
         else:
             ui_auth.Status_label.setText('Данные неверны')
 
 
 def auth_text_changed():
-    if ui_auth.Password_text.text and ui_auth.Last_name_text.text:
+    if ui_auth.Password_text.text and ui_auth.Login_text.text:
         ui_auth.Auth_button.setEnabled(True)
     else:
         ui_auth.Auth_button.setEnabled(False)
@@ -47,7 +52,7 @@ ui_auth.setupUi(window_auth)
 
 # functional
 ui_auth.Auth_button.clicked.connect(auth_login)
-ui_auth.Last_name_text.textChanged.connect(auth_text_changed)
+ui_auth.Login_text.textChanged.connect(auth_text_changed)
 ui_auth.Password_text.textChanged.connect(auth_text_changed)
 
 # starting

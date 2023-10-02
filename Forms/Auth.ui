@@ -15,12 +15,12 @@
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="1">
-    <widget class="QLineEdit" name="Last_name_text"/>
+    <widget class="QLineEdit" name="Login_text"/>
    </item>
    <item row="0" column="0">
-    <widget class="QLabel" name="last_name_lable">
+    <widget class="QLabel" name="login_lable">
      <property name="text">
-      <string>Фамилия</string>
+      <string>Логин</string>
      </property>
     </widget>
    </item>
