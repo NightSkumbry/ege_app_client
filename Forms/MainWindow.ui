@@ -11,16 +11,16 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Меню</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="Redact_account_button">
         <property name="text">
-         <string>PushButton</string>
+         <string>Редактировать аккаунт</string>
         </property>
        </widget>
       </item>
@@ -38,9 +38,9 @@
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_5">
+       <widget class="QPushButton" name="Pinned_tasks_button">
         <property name="text">
-         <string>PushButton</string>
+         <string>Помеченые задания</string>
         </property>
        </widget>
       </item>
@@ -58,7 +58,13 @@
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
-         <widget class="QLabel" name="label">
+         <widget class="QLabel" name="tasklists_label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="text">
            <string>Контрольные точки:</string>
           </property>
@@ -68,7 +74,34 @@
          </widget>
         </item>
         <item>
+         <widget class="Line" name="line_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="Tasklist_info_label">
+          <property name="text">
+           <string>Информация:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="Line" name="line_5">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
          <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="topMargin">
+           <number>10</number>
+          </property>
           <property name="bottomMargin">
            <number>10</number>
           </property>
@@ -86,7 +119,7 @@
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_2">
+           <widget class="QPushButton" name="Solve_tasklist_button">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -94,7 +127,7 @@
              </sizepolicy>
             </property>
             <property name="text">
-             <string>PushButton</string>
+             <string>Начать решение</string>
             </property>
            </widget>
           </item>
@@ -103,7 +136,7 @@
        </layout>
       </item>
       <item>
-       <widget class="QListWidget" name="listWidget">
+       <widget class="QListWidget" name="Tasklist_list">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
           <horstretch>0</horstretch>
@@ -122,7 +155,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../../../../Документы/check.svg</normaloff>../../../../../Документы/check.svg</iconset>
+           <normaloff>../Resourses/check.svg</normaloff>../Resourses/check.svg</iconset>
          </property>
          <property name="flags">
           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsEnabled</set>
@@ -134,7 +167,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../../../../Документы/minus.svg</normaloff>../../../../../Документы/minus.svg</iconset>
+           <normaloff>../Resourses/minus.svg</normaloff>../Resourses/minus.svg</iconset>
          </property>
         </item>
         <item>
@@ -143,7 +176,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../../../../Документы/kross.svg</normaloff>../../../../../Документы/kross.svg</iconset>
+           <normaloff>../Resourses/cross.svg</normaloff>../Resourses/cross.svg</iconset>
          </property>
         </item>
        </widget>
@@ -162,12 +195,19 @@
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_4">
         <item>
-         <widget class="QLabel" name="label_2">
+         <widget class="QLabel" name="variants_label">
           <property name="text">
            <string>Варианты:</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignHCenter|Qt::AlignTop</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="Line" name="line_6">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
           </property>
          </widget>
         </item>
@@ -187,7 +227,7 @@
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_5">
           <item>
-           <widget class="QLabel" name="label_3">
+           <widget class="QLabel" name="variant_site_label">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
               <horstretch>0</horstretch>
@@ -195,7 +235,7 @@
              </sizepolicy>
             </property>
             <property name="text">
-             <string>TextLabel</string>
+             <string>Сайт:</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -221,16 +261,16 @@
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_5">
             <item>
-             <widget class="QRadioButton" name="radioButton">
+             <widget class="QRadioButton" name="Variant_site_kege_radiobutton">
               <property name="text">
-               <string>RadioButton</string>
+               <string>КЕГЭ</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QRadioButton" name="radioButton_2">
+             <widget class="QRadioButton" name="Variant_site_pol_radiobutton">
               <property name="text">
-               <string>RadioButton</string>
+               <string>Поляков</string>
               </property>
              </widget>
             </item>
@@ -252,19 +292,29 @@
          </spacer>
         </item>
         <item>
+         <widget class="Line" name="line_7">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
          <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <property name="topMargin">
+           <number>10</number>
+          </property>
           <property name="bottomMargin">
            <number>10</number>
           </property>
           <item>
-           <widget class="QLabel" name="label_6">
+           <widget class="QLabel" name="variant_number_label">
             <property name="text">
-             <string>TextLabel</string>
+             <string>Номер варианта</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit"/>
+           <widget class="QLineEdit" name="Variant_number_text"/>
           </item>
           <item>
            <spacer name="horizontalSpacer_3">
@@ -280,7 +330,7 @@
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_3">
+           <widget class="QPushButton" name="Solve_variant_button">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -288,7 +338,7 @@
              </sizepolicy>
             </property>
             <property name="text">
-             <string>PushButton</string>
+             <string>Начать решение</string>
             </property>
            </widget>
           </item>
@@ -297,7 +347,7 @@
        </layout>
       </item>
       <item>
-       <widget class="QListWidget" name="listWidget_2">
+       <widget class="QListWidget" name="Variant_list">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
           <horstretch>0</horstretch>
@@ -326,12 +376,19 @@
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_6">
         <item>
-         <widget class="QLabel" name="label_4">
+         <widget class="QLabel" name="tasks_label">
           <property name="text">
-           <string>TextLabel</string>
+           <string>Задачи:</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignHCenter|Qt::AlignTop</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="Line" name="line_8">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
           </property>
          </widget>
         </item>
@@ -351,9 +408,9 @@
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_8">
           <item>
-           <widget class="QLabel" name="label_5">
+           <widget class="QLabel" name="tasks_site_label">
             <property name="text">
-             <string>TextLabel</string>
+             <string>Сайт:</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -379,16 +436,16 @@
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_7">
             <item>
-             <widget class="QRadioButton" name="radioButton_3">
+             <widget class="QRadioButton" name="Tasks_site_kege_radiobutton">
               <property name="text">
-               <string>RadioButton</string>
+               <string>КЕГЭ</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QRadioButton" name="radioButton_4">
+             <widget class="QRadioButton" name="Tasks_site_pol_radiobutton">
               <property name="text">
-               <string>RadioButton</string>
+               <string>Поляков</string>
               </property>
              </widget>
             </item>
@@ -410,19 +467,29 @@
          </spacer>
         </item>
         <item>
+         <widget class="Line" name="line_9">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
          <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <property name="topMargin">
+           <number>10</number>
+          </property>
           <property name="bottomMargin">
            <number>10</number>
           </property>
           <item>
-           <widget class="QLabel" name="label_7">
+           <widget class="QLabel" name="task_number_label">
             <property name="text">
-             <string>TextLabel</string>
+             <string>Номер задачи</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_2"/>
+           <widget class="QLineEdit" name="Task_number_text"/>
           </item>
           <item>
            <spacer name="horizontalSpacer_6">
@@ -438,9 +505,9 @@
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_4">
+           <widget class="QPushButton" name="Solve_task_button">
             <property name="text">
-             <string>PushButton</string>
+             <string>Начать решение</string>
             </property>
            </widget>
           </item>
@@ -449,7 +516,7 @@
        </layout>
       </item>
       <item>
-       <widget class="QListWidget" name="listWidget_3">
+       <widget class="QListWidget" name="Task_list">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
           <horstretch>0</horstretch>
@@ -470,5 +537,70 @@
   </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>Variant_number_text</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>Variant_list</receiver>
+   <slot>clearSelection()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>209</x>
+     <y>433</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>473</x>
+     <y>385</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Variant_list</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>Variant_number_text</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>446</x>
+     <y>325</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>160</x>
+     <y>428</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Task_number_text</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>Task_list</receiver>
+   <slot>clearSelection()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>173</x>
+     <y>642</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>462</x>
+     <y>605</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Task_list</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>Task_number_text</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>468</x>
+     <y>539</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>145</x>
+     <y>629</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
