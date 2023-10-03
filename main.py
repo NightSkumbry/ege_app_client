@@ -1,4 +1,4 @@
-# from main_window import Ui_MainWindow as main_window
+from main_window_ui import Ui_MainWindow
 from auth_ui import Ui_Auth_dialog
 from configure_ui import Ui_Configure_dialog
 import sys
@@ -69,8 +69,8 @@ app = QtWidgets.QApplication(sys.argv)
 
 # setuping
 window_main = QtWidgets.QMainWindow()
-# ui_main_window = main_window()
-# ui_main_window.setupUi(window)
+ui_main_window = Ui_MainWindow()
+ui_main_window.setupUi(window_main)
 window_auth = QtWidgets.QDialog()
 ui_auth = Ui_Auth_dialog()
 ui_auth.setupUi(window_auth)
