@@ -50,6 +50,6 @@ class Ui_Configure_dialog(object):
     def retranslateUi(self, Configure_dialog):
         _translate = QtCore.QCoreApplication.translate
         Configure_dialog.setWindowTitle(_translate("Configure_dialog", "Настройка пользователя"))
-        self.login_lable.setText(_translate("Configure_dialog", "Логин"))
-        self.password_lable.setText(_translate("Configure_dialog", "Пароль"))
+        self.login_lable.setText(_translate("Configure_dialog", "Новый логин"))
+        self.password_lable.setText(_translate("Configure_dialog", "Новый пароль"))
         self.Save_button.setText(_translate("Configure_dialog", "Сохранить"))

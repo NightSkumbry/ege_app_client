@@ -43,9 +43,9 @@ class Ui_Redact_account_dialog(object):
         self.Password_text.setEchoMode(QtWidgets.QLineEdit.EchoMode.Password)
         self.Password_text.setObjectName("Password_text")
         self.gridLayout.addWidget(self.Password_text, 1, 1, 1, 1)
-        self.current_password_text = QtWidgets.QLabel(parent=Redact_account_dialog)
-        self.current_password_text.setObjectName("current_password_text")
-        self.gridLayout.addWidget(self.current_password_text, 2, 0, 1, 1)
+        self.current_password_label = QtWidgets.QLabel(parent=Redact_account_dialog)
+        self.current_password_label.setObjectName("current_password_text")
+        self.gridLayout.addWidget(self.current_password_label, 2, 0, 1, 1)
         self.Current_password_text = QtWidgets.QLineEdit(parent=Redact_account_dialog)
         self.Current_password_text.setEchoMode(QtWidgets.QLineEdit.EchoMode.Password)
         self.Current_password_text.setObjectName("Current_password_text")
@@ -57,7 +57,7 @@ class Ui_Redact_account_dialog(object):
     def retranslateUi(self, Redact_account_dialog):
         _translate = QtCore.QCoreApplication.translate
         Redact_account_dialog.setWindowTitle(_translate("Redact_account_dialog", "Настройка пользователя"))
-        self.password_lable.setText(_translate("Redact_account_dialog", "Пароль"))
+        self.password_lable.setText(_translate("Redact_account_dialog", "Новый пароль"))
         self.Save_button.setText(_translate("Redact_account_dialog", "Сохранить"))
-        self.login_lable.setText(_translate("Redact_account_dialog", "Логин"))
-        self.current_password_text.setText(_translate("Redact_account_dialog", "Текущий проль"))
+        self.login_lable.setText(_translate("Redact_account_dialog", "Новый логин"))
+        self.current_password_label.setText(_translate("Redact_account_dialog", "Текущий проль"))
