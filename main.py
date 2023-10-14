@@ -2,6 +2,7 @@ from main_window_ui import Ui_MainWindow
 from auth_ui import Ui_Auth_dialog
 from configure_ui import Ui_Configure_dialog
 from redact_account_ui import Ui_Redact_account_dialog
+from Indev.task import Ui_Dialog
 import sys
 import os
 from PyQt6 import QtCore, QtGui, QtWidgets
@@ -122,6 +123,12 @@ cookies = False
 app = QtWidgets.QApplication(sys.argv)
 
 # setuping
+tsak = QtWidgets.QDialog()
+task = Ui_Dialog()
+task.setupUi(tsak)
+tsak.show()
+
+
 window_main = QtWidgets.QMainWindow()
 ui_main_window = Ui_MainWindow()
 ui_main_window.setupUi(window_main)
@@ -145,6 +152,10 @@ ui_redact_account.setupUi(window_redact_account)
 
 # functional
 ui_main_window.Redact_account_button.clicked.connect(main_redact_account)
+# self.Variant_number_text.textChanged['QString'].connect(self.Variant_list.clearSelection) # type: ignore
+# self.Variant_list.currentRowChanged['int'].connect(self.Variant_number_text.clear) # type: ignore
+# self.Task_number_text.textChanged['QString'].connect(self.Task_list.clearSelection) # type: ignore
+# self.Task_list.currentRowChanged['int'].connect(self.Task_number_text.clear) # type: ignore
 
 ui_auth.Auth_button.clicked.connect(auth_login)
 ui_auth.Login_text.textChanged.connect(auth_text_changed)

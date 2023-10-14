@@ -264,10 +264,6 @@ class Ui_MainWindow(object):
         self.Tasks_site_group.addButton(self.Tasks_site_pol_radiobutton, 2)
         
         self.retranslateUi(MainWindow)
-        self.Variant_number_text.textChanged['QString'].connect(self.Variant_list.clearSelection) # type: ignore
-        self.Variant_list.currentRowChanged['int'].connect(self.Variant_number_text.clear) # type: ignore
-        self.Task_number_text.textChanged['QString'].connect(self.Task_list.clearSelection) # type: ignore
-        self.Task_list.currentRowChanged['int'].connect(self.Task_number_text.clear) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
