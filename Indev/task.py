@@ -23,43 +23,14 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Task №x"))
-        self.textBrowser.setHtml(_translate("Dialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"td { padding-top:5px; padding-right:20px; padding-left:20px; padding-bottom:5px;  }"
-"</style></head><body style=\" font-family:\'Ubuntu\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-'''<p>Миша заполнял таблицу истинности логической функции \(F = (x \land \neg y) \lor (y \equiv z) \lor \neg w \), но успел заполнить лишь фрагмент из трёх различных её строк, даже не указав, какому столбцу таблицы соответствует каждая из переменных \(w,x,y,z\).</p>
-<table style="border-collapse: collapse; width: 500px; border-width: 1px;" border="1"><colgroup><col style="width: 19.9609%;"><col style="width: 19.9609%;"><col style="width: 19.9609%;"><col style="width: 19.9609%;"><col style="width: 19.9609%;"></colgroup>
-<tbody>
-<tr>
-<td style="border-width: 1px;  text-align: center;">&nbsp;</td>
-<td style="border-width: 1px;  text-align: center;">&nbsp;</td>
-<td style="border-width: 1px;  text-align: center;">&nbsp;</td>
-<td style="border-width: 1px;  text-align: center;">&nbsp;</td>
-<td style="border-width: 1px;  text-align: center;"><strong>F</strong></td>
-</tr>
-<tr>
-<td style="border-width: 1px;  text-align: center;">&nbsp;</td>
-<td style="border-width: 1px;  text-align: center;">&nbsp;</td>
-<td style="border-width: 1px;  text-align: center;">0</td>
-<td style="border-width: 1px;  text-align: center;">0</td>
-<td style="border-width: 1px;  text-align: center;">0</td>
-</tr>
-<tr>
-<td style="border-width: 1px;  text-align: center;">1</td>
-<td style="border-width: 1px;  text-align: center;">0</td>
-<td style="border-width: 1px;  text-align: center;">&nbsp;</td>
-<td style="border-width: 1px;  text-align: center;">0</td>
-<td style="border-width: 1px;  text-align: center;">0</td>
-</tr>
-<tr>
-<td style="border-width: 1px;  text-align: center;">1</td>
-<td style="border-width: 1px;  text-align: center;">0</td>
-<td style="border-width: 1px;  text-align: center;">1</td>
-<td style="border-width: 1px;  text-align: center;">&nbsp;</td>
-<td style="border-width: 1px;  text-align: center;">0</td>
-</tr>
-</tbody>
-</table>
-<p>Определите, какому столбцу таблицы соответствует каждая из переменных \(w,x,y,z\).</p>'''
+        from Indev.test import task
+        task(10105)
+        with open('./Indev/data.html') as f:
+            self.textBrowser.setHtml(_translate("Dialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+    "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+    "p, li { white-space: pre-wrap; }\n"
+    "td { padding-top:5px; padding-right:20px; padding-left:20px; padding-bottom:5px;  }"
+    "table { margin-top:13px; }"
+    "</style></head><body style=\" font-family:\'Ubuntu\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
+    f'''{f.read()}'''
 "</body></html>"))
