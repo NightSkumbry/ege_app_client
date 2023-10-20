@@ -2,7 +2,6 @@ from main_window_ui import Ui_MainWindow
 from auth_ui import Ui_Auth_dialog
 from configure_ui import Ui_Configure_dialog
 from redact_account_ui import Ui_Redact_account_dialog
-from Indev.task import Ui_Dialog
 import sys
 import os
 from PyQt6 import QtCore, QtGui, QtWidgets
@@ -123,10 +122,6 @@ cookies = False
 app = QtWidgets.QApplication(sys.argv)
 
 # setuping
-tsak = QtWidgets.QDialog()
-task = Ui_Dialog()
-task.setupUi(tsak)
-tsak.show()
 
 
 window_main = QtWidgets.QMainWindow()
