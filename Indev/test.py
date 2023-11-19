@@ -12,12 +12,12 @@ def var():
         f.write(response.content)
 
 
-def task(n=10087):
+def task(n=100870):
     import requests
 
     response = requests.get(f'https://kompege.ru/api/v1/task/{n}')
 
-    print(response, type(response.content))
+    print(response, type(response.content), response.content.decode())
     j = json.loads(response.content)
     with open('./Indev/data.json', 'w') as f:
         f.write(json.dumps(j, ensure_ascii=False, indent=4))
@@ -47,4 +47,4 @@ def task(n=10087):
     
     
 
-# task()
+task()
