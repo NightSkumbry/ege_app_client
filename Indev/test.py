@@ -19,7 +19,7 @@ def task(n=100870):
 
     print(response, type(response.content), response.content.decode())
     j = json.loads(response.content)
-    with open('./Indev/data.json', 'w') as f:
+    with open('./Indev/data10104.json', 'w') as f:
         f.write(json.dumps(j, ensure_ascii=False, indent=4))
     h = j['text']
     pyperclip.copy(h)
@@ -47,4 +47,4 @@ def task(n=100870):
     
     
 
-task()
+task(10104)
