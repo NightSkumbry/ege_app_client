@@ -269,6 +269,9 @@
             </item>
             <item>
              <widget class="QRadioButton" name="Variant_site_pol_radiobutton">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
               <property name="text">
                <string>Поляков</string>
               </property>
@@ -444,6 +447,9 @@
             </item>
             <item>
              <widget class="QRadioButton" name="Tasks_site_pol_radiobutton">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
               <property name="text">
                <string>Поляков</string>
               </property>

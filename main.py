@@ -23,6 +23,7 @@ def main_redact_account():
         ui_redact_account.Password_text.clear()
         ui_redact_account.Login_text.clear()
         ui_redact_account.Status_label.clear()
+        self.Save_button.setEnabled(False)
         window_redact_account.show()
         global_stages[0] = Stages.Redact_account
 
